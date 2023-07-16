@@ -13,8 +13,8 @@ import { NativeBaseProvider } from "native-base";
 
 import { useFonts } from "expo-font";
 
-// import RegistrationScreen from "./screens/RegistrationScreen";
-import LoginScreen from "./screens/LoginScreen";
+import RegistrationScreen from "./screens/RegistrationScreen";
+// import LoginScreen from "./screens/LoginScreen";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -58,16 +58,16 @@ export default function App() {
             style={styles.image}
           >
             <StatusBar style="auto" />
-            {/* <RegistrationScreen
-              dimensions={dimensions}
-              isKeyboardOpen={isKeyboardOpen}
-              setIsKeyboardOpen={setIsKeyboardOpen}
-            /> */}
-            <LoginScreen
+            <RegistrationScreen
               dimensions={dimensions}
               isKeyboardOpen={isKeyboardOpen}
               setIsKeyboardOpen={setIsKeyboardOpen}
             />
+            {/* <LoginScreen
+              dimensions={dimensions}
+              isKeyboardOpen={isKeyboardOpen}
+              setIsKeyboardOpen={setIsKeyboardOpen}
+            /> */}
           </ImageBackground>
         </View>
       </TouchableWithoutFeedback>

@@ -66,7 +66,7 @@ const RegistrationScreen = ({
                   setIsKeyboardOpen(true);
                 }}
                 focusOutlineColor={"#FF6C00"}
-                value={state.email}
+                value={state.login}
                 onChangeText={(value) =>
                   setState((prevState) => ({ ...prevState, login: value }))
                 }
