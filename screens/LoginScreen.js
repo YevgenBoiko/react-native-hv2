@@ -18,13 +18,13 @@ const initialState = {
 
 const LoginScreen = ({ dimensions, isKeyboardOpen, setIsKeyboardOpen }) => {
   const [state, setState] = useState(initialState);
-
   const [showPassword, setShowPassword] = useState(false);
 
-  const keyboardHide = () => {
+  const onSubmit = () => {
     setIsKeyboardOpen(false);
     Keyboard.dismiss();
     setState(initialState);
+    console.log(state);
   };
 
   const onScreenTap = () => {
@@ -61,9 +61,6 @@ const LoginScreen = ({ dimensions, isKeyboardOpen, setIsKeyboardOpen }) => {
                 }
                 value={state.email}
                 placeholder="Адреса електронної пошти"
-                // onSubmitEditing={() => {
-                //   setIsKeyboardOpen(false);
-                // }}
               />
             </View>
 
@@ -94,7 +91,7 @@ const LoginScreen = ({ dimensions, isKeyboardOpen, setIsKeyboardOpen }) => {
             <TouchableOpacity
               style={styles.registerBtn}
               activeOpacity={0.7}
-              onPress={keyboardHide}
+              onPress={onSubmit}
             >
               <Text style={styles.textBtn}>Увійти</Text>
             </TouchableOpacity>

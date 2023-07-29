@@ -31,10 +31,11 @@ const RegistrationScreen = ({
     setShowPassword(!showPassword);
   };
 
-  const keyboardHide = () => {
+  const onSubmit = () => {
     setIsKeyboardOpen(false);
     Keyboard.dismiss();
     setState(initialState);
+    console.log(state);
   };
 
   const onScreenTap = () => {
@@ -117,10 +118,11 @@ const RegistrationScreen = ({
             <TouchableOpacity
               activeOpacity={0.7}
               style={{ ...styles.btn, marginTop: 43 }}
-              onPress={keyboardHide}
+              onPress={onSubmit}
             >
               <Text style={styles.btnTitle}>Зареєструватися</Text>
             </TouchableOpacity>
+
             <TouchableOpacity>
               <Text style={styles.textSubBtn}>Вже є аккаунт? Увійти</Text>
             </TouchableOpacity>
